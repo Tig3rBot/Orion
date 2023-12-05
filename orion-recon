@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Verificar si se proporcionó un dominio como argumento
+if [ -z "$1" ]; then
+    echo "Por favor, proporcione el dominio como argumento. Ejemplo: ./r3con.sh example.com"
+    exit 1
+fi
+
+# Obtener el dominio desde el argumento
+domain="$1"
+
+# Ejecutar el script de Python con el dominio como argumento
+python3 orion-recon.py "$domain"
